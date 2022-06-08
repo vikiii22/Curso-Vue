@@ -21,6 +21,12 @@
       <button v-on:click="aumenta()">Add</button>
       <button v-on:click="disminuye()">Remove</button>
       <p>Result: {{ counter }}</p>
+      <input type="text" v-on:input="cambiaNombre">
+      <p>Your name: {{ name }}</p>
+      <form v-on:submit.prevent="enviado">
+        <input type="text" v-model="nameInput">
+        <button type="submit">Enviar</button>
+      </form>
     </section>
   </body>
 </html>
