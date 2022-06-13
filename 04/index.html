@@ -17,8 +17,8 @@
       <h1>Vue Dynamic Styling</h1>
     </header>
     <section id="styling">
-      <div class="demo" :class="{active: cajaASeleccionada}" :style="{borderColor: cajaASeleccionada ? 'red' : '#ccc'}" @click="cajaSeleccionada('A')"></div>
-      <div class="demo" :class="{active: cajaBSeleccionada}" :style="{borderColor: cajaBSeleccionada ? 'red' : '#ccc'}" @click="cajaSeleccionada('B')"></div>
+      <div class="demo" :class="{active: cajaASeleccionada}" @click="cajaSeleccionada('A')"></div>
+      <div class="demo" :class="{active: cajaBSeleccionada}" @click="cajaSeleccionada('B')"></div>
       <div class="demo" :class="{active: cajaCSeleccionada}" @click="cajaSeleccionada('C')"></div>
     </section>
   </body>
