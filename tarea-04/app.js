@@ -12,15 +12,15 @@ const app = Vue.createApp({
             return{
                 user1:this.inputUser==='user1',
                 user2:this.inputUser==='user2',
-                visible:this.parrafoVisible,
-                hidden:!this.parrafoVisible
+                visible:this.parrafoVisible==true,
+                hidden:this.parrafoVisible==false
             }
         },
     },
 
     methods: {
         esconderParrafo(){
-            this.parrafoVisible = !this.parrafoVisible;
+            (this.parrafoVisible == true) ? this.parrafoVisible=false : this.parrafoVisible=true;
         }
     },
 });
