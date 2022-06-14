@@ -14,6 +14,10 @@ const app = Vue.createApp({
 
         ocultarLista() {
             this.listaTareasVisible = !this.listaTareasVisible;
+        },
+
+        remove(task){
+            this.tasks.splice(task, 1);
         }
     },
 });
