@@ -38,7 +38,7 @@
       <section id="controls">
         <button :disabled="deshabilitado==true" @click="playerAttack">ATTACK</button>
         <button :disabled="superAtaque < 3 || deshabilitado==true" @click="specialAttack">SPECIAL ATTACK</button>
-        <button :disabled="deshabilitado==true" @click="curar">HEAL</button>
+        <button :disabled="deshabilitado==true || vecesCurado > 4" @click="curar">HEAL</button>
         <button :disabled="deshabilitado==true" @click="surrender">SURRENDER</button>
       </section>
       <section id="log" class="container">

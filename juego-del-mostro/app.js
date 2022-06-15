@@ -9,7 +9,8 @@ const app = Vue.createApp({
             mostroHealth: 100,
             superAtaque: 0,
             winner:'',
-            deshabilitado:false
+            deshabilitado:false,
+            vecesCurado: 0
         }
     },
 
@@ -62,12 +63,15 @@ const app = Vue.createApp({
         },
 
         mostroAttack() {
-            const damage = randomDamage(5, 12);
+            const damage = randomDamage(10, 16);
             this.playerHealth -= damage;
+            if (this.playerHealth <= 10){
+                this.playerHealth=0;
+            }
         },
 
         specialAttack() {
-            const damage = randomDamage(10, 25);
+            const damage = randomDamage(18, 30);
             this.mostroHealth -= damage;
             this.mostroAttack();
             this.comprobarAtaqueEspecial();
@@ -78,6 +82,7 @@ const app = Vue.createApp({
                 return
             } else {
                 this.playerHealth += 10;
+                this.vecesCurado++;
             }
         },
 
