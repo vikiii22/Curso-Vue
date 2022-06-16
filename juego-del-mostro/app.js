@@ -31,6 +31,7 @@ const app = Vue.createApp({
                 this.winner='empate';
             }else if(value==0){
                 this.winner='mostro';
+                this.deshabilitado=true;
             }
         },
 
@@ -50,7 +51,9 @@ const app = Vue.createApp({
             this.mostroHealth=100;
             this.winner=null;
             this.superAtaque=0;
-            this.log.splice(0, this.log.length)
+            this.vecesCurado=0;
+            this.log.splice(0, this.log.length);
+            this.deshabilitado=false;
         },
 
         comprobarAtaqueEspecial() {
