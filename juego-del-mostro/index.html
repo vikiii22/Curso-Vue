@@ -34,16 +34,19 @@
         <h3 v-if="winner === 'mostro'">Pierdes</h3>
         <h3 v-if="winner === 'player'">Ganas</h3>
         <h3 v-if="winner === 'empate'">Empate</h3>
+        <button @click="startNewGame">Start new Game</button>
       </section>
       <section id="controls">
         <button :disabled="deshabilitado==true" @click="playerAttack">ATTACK</button>
         <button :disabled="superAtaque < 3 || deshabilitado==true" @click="specialAttack">SPECIAL ATTACK</button>
-        <button :disabled="deshabilitado==true || vecesCurado > 4" @click="curar">HEAL</button>
+        <button :disabled="deshabilitado==true || vecesCurado >= 4" @click="curar">HEAL</button>
         <button :disabled="deshabilitado==true" @click="surrender">SURRENDER</button>
       </section>
       <section id="log" class="container">
         <h2>Battle Log</h2>
-        <ul></ul>
+        <ul>
+          <li v-for="l in log">{{l}}</li>
+        </ul>
       </section>
     </div>
   </body>

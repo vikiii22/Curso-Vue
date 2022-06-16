@@ -10,7 +10,8 @@ const app = Vue.createApp({
             superAtaque: 0,
             winner:'',
             deshabilitado:false,
-            vecesCurado: 0
+            vecesCurado: 0,
+            log: []
         }
     },
 
@@ -44,6 +45,14 @@ const app = Vue.createApp({
     },
 
     methods: {
+        startNewGame(){
+            this.playerHealth=100;
+            this.mostroHealth=100;
+            this.winner=null;
+            this.superAtaque=0;
+            this.log.splice(0, this.log.length)
+        },
+
         comprobarAtaqueEspecial() {
             if (this.superAtaque < 3) {
                 this.superAtaque++;
@@ -60,6 +69,7 @@ const app = Vue.createApp({
             if (this.mostroHealth <= 10){
                 this.mostroHealth=0;
             }
+            this.log.push('Player attack with ' + damage +' of damage');
         },
 
         mostroAttack() {
@@ -75,6 +85,7 @@ const app = Vue.createApp({
             this.mostroHealth -= damage;
             this.mostroAttack();
             this.comprobarAtaqueEspecial();
+            this.log.push('Player use Super attack with ' + damage +' of damage');
         },
 
         curar() {
@@ -83,6 +94,7 @@ const app = Vue.createApp({
             } else {
                 this.playerHealth += 10;
                 this.vecesCurado++;
+                this.log.push('Player heal');
             }
         },
 
