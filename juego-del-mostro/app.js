@@ -78,6 +78,7 @@ const app = Vue.createApp({
             if (this.playerHealth <= 10){
                 this.playerHealth=0;
             }
+            this.log.push('Mostro attack with ' + damage +' of damage');
         },
 
         specialAttack() {
