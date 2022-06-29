@@ -4,21 +4,31 @@
     nombre="Jose"
     numero="727701591"
     email="jose@gmail.com"
+    favorito="0"
   ></contactos-amigos>
   <contactos-amigos
     nombre="Pedro"
     numero="727701591"
     email="jose@gmail.com"
+    favorito="0"
   ></contactos-amigos>
   <contactos-amigos
     nombre="Ana"
     numero="727701591"
     email="jose@gmail.com"
+    favorito="0"
   ></contactos-amigos>
   <contactos-amigos
     nombre="Aintzane"
     numero="610543213"
     email="ainza@gmail.com"
+    favorito="1"
+  ></contactos-amigos>
+  <contactos-amigos
+    nombre="Julian"
+    numero="610543213"
+    email="ainza@gmail.com"
+    favorito="1"
   ></contactos-amigos>
 </template>
 
@@ -83,5 +93,9 @@
         background-color: #ec3169;
         border-color: #ec3169;
         box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.26);
+    }
+
+    .desplegable li{
+      background-color: gray;
     }
 </style>
