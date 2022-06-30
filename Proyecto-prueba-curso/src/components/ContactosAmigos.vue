@@ -48,9 +48,6 @@ export default {
       type: Boolean,
       required: false,
       default: false,
-    //   validator: function(valor){
-    //     return valor===true || valor===false;
-    //   }
     },
   },
 
