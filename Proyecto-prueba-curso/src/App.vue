@@ -1,101 +1,106 @@
 <template>
   <h1>Amigos</h1>
   <contactos-amigos
-    nombre="Jose"
-    numero="727701591"
-    email="jose@gmail.com"
-    favorito="0"
-  ></contactos-amigos>
-  <contactos-amigos
-    nombre="Pedro"
-    numero="727701591"
-    email="jose@gmail.com"
-    favorito="0"
-  ></contactos-amigos>
-  <contactos-amigos
-    nombre="Ana"
-    numero="727701591"
-    email="jose@gmail.com"
-    favorito="0"
-  ></contactos-amigos>
-  <contactos-amigos
-    nombre="Aintzane"
-    numero="610543213"
-    email="ainza@gmail.com"
-    favorito="1"
-  ></contactos-amigos>
-  <contactos-amigos
-    nombre="Julian"
-    numero="610543213"
-    email="ainza@gmail.com"
-    favorito="1"
-  ></contactos-amigos>
+    v-for="amigo in amigos"
+    v-bind:key="amigo.id"
+    :nombre="amigo.nombre"
+    :numero="amigo.numero"
+    :email="amigo.email"
+  />
 </template>
 
 <script>
+export default {
+  data() {
+    return {
+      amigos: [
+        {
+          nombre: "Aintzane",
+          numero: 610546413,
+          email: "ainza@gmail.com",
+        },
+        {
+          nombre: "Jose",
+          numero: 727701591,
+          email: "jose@gmail.com",
+        },
+        {
+          nombre: "Manolo",
+          numero: 610546413,
+          email: "manolico@gmail.com",
+        },
+        {
+          nombre: "Elisa",
+          numero: 610546413,
+          email: "elisa@gmail.com",
+        },
+      ],
+    };
+  },
+};
 </script>
 
 <style>
-    * {
-        box-sizing: border-box;
-    }
-    html {
-        font-family: "Jost", sans-serif;
-    }
-    body {
-        margin: 0;
-    }
+* {
+  box-sizing: border-box;
+}
+html {
+  font-family: "Jost", sans-serif;
+}
+body {
+  margin: 0;
+}
 
-    h1{
-        text-align: center;
-         box-shadow: 0 2px 8px rgba(0, 0, 0, 0.26);
-        margin: 3rem auto;
-        border-radius: 10px;
-        padding: 1rem;
-        background-color: #58004d;
-        color: white;
-        text-align: center;
-        width: 90%;
-        max-width: 40rem;
-    }
+h1 {
+  text-align: center;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.26);
+  margin: 3rem auto;
+  border-radius: 10px;
+  padding: 1rem;
+  background-color: #58004d;
+  color: white;
+  text-align: center;
+  width: 90%;
+  max-width: 40rem;
+}
 
-    #app ul {
-        margin: 0;
-        padding: 0;
-        list-style: none;
-    }
-    #app li {
-        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.26);
-        margin: 1rem auto;
-        border-radius: 10px;
-        padding: 1rem;
-        text-align: center;
-        width: 90%;
-        max-width: 40rem;
-    }
-    #app h2 {
-        font-size: 2rem;
-        border-bottom: 4px solid #ccc;
-        color: #58004d;
-        margin: 0 0 1rem 0;
-    }
-    #app button {
-        font: inherit;
-        cursor: pointer;
-        border: 1px solid #ff0077;
-        background-color: #ff0077;
-        color: white;
-        padding: 0.05rem 1rem;
-        box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.26);
-    }
-        #app button:hover,
-        #app button:active {
-        background-color: #ec3169;
-        border-color: #ec3169;
-        box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.26);
-    }
+#app ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+#app li {
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.26);
+  margin: 1rem auto;
+  border-radius: 10px;
+  padding: 1rem;
+  text-align: center;
+  width: 90%;
+  max-width: 40rem;
+}
+#app h2 {
+  font-size: 2rem;
+  border-bottom: 4px solid #ccc;
+  color: #58004d;
+  margin: 0 0 1rem 0;
+}
+#app button {
+  font: inherit;
+  cursor: pointer;
+  border: 1px solid #ff0077;
+  background-color: #ff0077;
+  color: white;
+  padding: 0.05rem 1rem;
+  box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.26);
+}
+#app button:hover,
+#app button:active {
+  background-color: #ec3169;
+  border-color: #ec3169;
+  box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.26);
+}
 
-    .desplegable li{
-      background-color: gray;
-    }
+.desplegable li {
+  background-color: gray;
+}
 </style>
