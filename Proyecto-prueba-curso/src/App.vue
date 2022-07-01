@@ -6,7 +6,9 @@
     :nombre="amigo.nombre"
     :numero="amigo.numero"
     :email="amigo.email"
+    :favorito="amigo.favorito"
   />
+  <amigo-nuevo @anyadir-amigo="anyadirAmigo"></amigo-nuevo>
 </template>
 
 <script>
@@ -18,24 +20,39 @@ export default {
           nombre: "Aintzane",
           numero: 610546413,
           email: "ainza@gmail.com",
+          favorito: true,
         },
         {
           nombre: "Jose",
           numero: 727701591,
           email: "jose@gmail.com",
+          favorito: true,
         },
         {
           nombre: "Manolo",
           numero: 610546413,
           email: "manolico@gmail.com",
+          favorito: false,
         },
         {
           nombre: "Elisa",
           numero: 610546413,
           email: "elisa@gmail.com",
+          favorito: false,
         },
       ],
     };
+  },
+
+  methods: {
+    anyadirAmigo(nombreR, telefono, correoR) {
+      const nuevoAmigo = {
+        nombre: nombreR,
+        numero: telefono,
+        email: correoR,
+      };
+      this.amigos.push(nuevoAmigo);
+    },
   },
 };
 </script>
