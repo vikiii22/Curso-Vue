@@ -1,4 +1,5 @@
 <template>
+  <amigo-nuevo @anyadir-amigo="anyadirAmigo"></amigo-nuevo>
   <h1>Amigos</h1>
   <contactos-amigos
     v-for="amigo in amigos"
@@ -8,7 +9,6 @@
     :email="amigo.email"
     :favorito="amigo.favorito"
   />
-  <amigo-nuevo @anyadir-amigo="anyadirAmigo"></amigo-nuevo>
 </template>
 
 <script>
@@ -20,7 +20,7 @@ export default {
           nombre: "Aintzane",
           numero: 610546413,
           email: "ainza@gmail.com",
-          favorito: true,
+          favorito: true, 
         },
         {
           nombre: "Jose",
