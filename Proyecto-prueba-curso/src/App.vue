@@ -11,7 +11,9 @@
     @delete="deleteAmigo(amigo.id)"
   />
 </template>
+<!-- <keep-alive>
 
+</keep-alive> -->
 <script>
 export default {
   data() {
