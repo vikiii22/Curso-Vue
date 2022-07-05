@@ -8,6 +8,7 @@
     :numero="amigo.numero"
     :email="amigo.email"
     :favorito="amigo.favorito"
+    @delete="deleteAmigo(amigo.id)"
   />
 </template>
 
@@ -17,24 +18,28 @@ export default {
     return {
       amigos: [
         {
+          id: 1,
           nombre: "Aintzane",
           numero: 610546413,
           email: "ainza@gmail.com",
           favorito: true, 
         },
         {
+          id:2,
           nombre: "Jose",
           numero: 727701591,
           email: "jose@gmail.com",
           favorito: true,
         },
         {
+          id:3,
           nombre: "Manolo",
           numero: 610546413,
           email: "manolico@gmail.com",
           favorito: false,
         },
         {
+          id:4,
           nombre: "Elisa",
           numero: 610546413,
           email: "elisa@gmail.com",
@@ -47,12 +52,17 @@ export default {
   methods: {
     anyadirAmigo(nombreR, telefono, correoR) {
       const nuevoAmigo = {
+        id: this.amigos.length + 1,
         nombre: nombreR,
         numero: telefono,
         email: correoR,
       };
       this.amigos.push(nuevoAmigo);
     },
+
+    deleteAmigo(amigoId){
+      this.amigos=this.amigos.filter((amigos)=> amigos.id != amigoId);
+    }
   },
 };
 </script>

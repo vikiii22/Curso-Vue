@@ -17,6 +17,7 @@
             contactoFavorito === true ? "Desmarcar Favorito" : "Marcar favorito"
           }}
         </button>
+        <button @click="$emit('delete')">Eliminar amigos</button>
       </li>
     </ul> 
   </ul>
@@ -31,6 +32,7 @@ export default {
   //     'email',
   //     'favorito'
   // ],
+  emits: ['delete'],
   props: {
     nombre: {
       type: String,
