@@ -15,6 +15,6 @@ app.component('base-badge', BaseBadge);
 app.component('badge-list', BadgeList);
 app.component('user-info', UserInfo);
 app.component('base-card', BaseCard);
-app.component('course-goals', CourseGoals)
+app.component('course-goals', CourseGoals);
 
 app.mount('#app');
