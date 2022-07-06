@@ -47,7 +47,6 @@ export default {
 
     recibe(valor){
       this.recibido=valor;
-      console.log(this.recibido);
     }
   }
 };

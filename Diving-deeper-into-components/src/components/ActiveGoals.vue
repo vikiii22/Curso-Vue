@@ -17,7 +17,6 @@ export default {
     methods: {
         recibe() {
             (this.recibido==='') ? '' : this.goals.push(this.recibido);
-            console.log(this.goals);
         }
     },
 }
