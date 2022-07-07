@@ -1,10 +1,10 @@
 <template>
   <li>
     <div>
-      <header>
+      <div>
         <h3>{{ title }}</h3>
-        <button>Delete</button>
-      </header>
+        <base-button texto="Delete"></base-button>
+      </div>
     </div>
     <p>{{ description }}</p>
     <nav>
@@ -14,7 +14,9 @@
 </template>
 
 <script>
+import BaseButton from './BaseButton.vue';
 export default {
+  components: { BaseButton },
   props: {
     title: String,
     description: String,

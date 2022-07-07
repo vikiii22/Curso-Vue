@@ -1,22 +1,17 @@
 <template>
-  <ul>
-    <li v-for="r in storedResources" :key="r.id">
-      <resource-item
-        :description="r.description"
-        :link="r.link"
-        :title="r.title"
-      ></resource-item>
-    </li>
-  </ul>
+<the-header :titulo="titulo"></the-header>
+  <resource-stored :stored="storedResources"></resource-stored>
 </template>
 
 <script>
-import ResourceItem from './components/ResourceItem.vue';
+import TheHeader from './components/TheHeader.vue';
+import ResourceStored from './components/ResourceStored.vue';
 export default {
-  components: { 'resource-item': ResourceItem },
+  components: { ResourceStored, TheHeader },
 
   data() {
     return {
+      titulo:'App de prueba de Jose',
       storedResources: [
         {
           id: 'Guía oficial',
