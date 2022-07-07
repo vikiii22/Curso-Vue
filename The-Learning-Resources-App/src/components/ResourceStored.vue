@@ -19,7 +19,9 @@ export default {
   components: { ResourceItem, BaseCard },
   props: ['stored'],
   data() {
-    return {};
+    return {
+        
+    };
   },
 };
 </script>

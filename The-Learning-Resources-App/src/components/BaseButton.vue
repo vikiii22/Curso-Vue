@@ -1,19 +1,20 @@
 <template>
-    <button>{{ texto }}</button>
+    <button :type="tipo">{{ texto }}</button>
 </template>
 
 <script>
 export default {
-    props:['texto']
+    props:['texto', 'tipo']
 }
 </script>
 
 <style scoped>
 button{
-    border-radius: 30px;
+    border-radius: 10px;
     background-color: brown;
     color: white;
     font-weight: bold;
+    margin-left: 90%;
 }
 
 button:hover{
