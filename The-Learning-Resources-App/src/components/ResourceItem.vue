@@ -5,13 +5,14 @@
     <nav>
       <a :href="link">Ver Recurso</a>
     </nav>
-    <base-button tipo="flat" texto="Delete"></base-button>
+    <base-button tipo="flat" texto="Delete" @click="eliminar()"></base-button>
   </li>
 </template>
 
 <script>
 import BaseButton from './BaseButton.vue';
 export default {
+  emits:['eliminar'],
   components: { BaseButton },
   props: {
     title: String,
@@ -21,7 +22,11 @@ export default {
   data() {
     return {};
   },
-  methods: {},
+  methods: {
+    eliminar(){
+      this.$emit('eliminar');
+    }
+  },
 };
 </script>
 

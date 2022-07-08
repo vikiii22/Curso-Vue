@@ -6,6 +6,7 @@
           :description="r.description"
           :link="r.link"
           :title="r.title"
+          v-on:eliminar="borrar(r.id)"
         ></resource-item
       ></base-card>
     </li>
@@ -17,12 +18,15 @@ import BaseCard from './BaseCard.vue';
 import ResourceItem from './ResourceItem.vue';
 export default {
   components: { ResourceItem, BaseCard },
-  props: ['stored'],
+  inject: ['stored'],
   data() {
-    return {
-        
-    };
+    return {};
   },
+  methods:{
+    borrar(nombre){
+      console.log('Intento de borrar ' + nombre);
+    }
+  }
 };
 </script>
 

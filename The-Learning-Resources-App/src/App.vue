@@ -1,37 +1,20 @@
 <template>
-<the-header :titulo="titulo"></the-header>
-  <resource-stored :stored="storedResources"></resource-stored>
+  <the-header :titulo="titulo"></the-header>
+  <!-- <resource-stored :stored="storedResources"></resource-stored> -->
+  <the-resources></the-resources>
 </template>
 
 <script>
 import TheHeader from './components/TheHeader.vue';
-import ResourceStored from './components/ResourceStored.vue';
+// import ResourceStored from './components/ResourceStored.vue';
+import TheResources from './components/TheResources.vue';
 export default {
-  components: { ResourceStored, TheHeader },
+  components: { TheHeader, TheResources },
 
   data() {
     return {
-      titulo:'App de prueba de Jose',
-      storedResources: [
-        {
-          id: 'Guía oficial',
-          title: 'Guía oficial',
-          description: 'La guía oficial de VUE.js',
-          link: 'https://vuejs.org',
-        },
-        {
-          id: 'google',
-          title: 'Google',
-          description: 'Aprender google',
-          link: 'https://google.org',
-        },
-      ],
+      titulo: 'App de prueba de Jose',
     };
-  },
-  methods: {
-    hola() {
-      return;
-    },
   },
 };
 </script>
