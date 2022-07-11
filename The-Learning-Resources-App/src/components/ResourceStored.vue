@@ -4,6 +4,7 @@
       <base-card
         ><resource-item
           :description="r.description"
+          :id="r.id"
           :link="r.link"
           :title="r.title"
           v-on:eliminar="borrar(r.id)"
@@ -18,7 +19,7 @@ import BaseCard from './BaseCard.vue';
 import ResourceItem from './ResourceItem.vue';
 export default {
   components: { ResourceItem, BaseCard },
-  inject: ['stored'],
+  inject: ['stored', 'deleteResource'],
   data() {
     return {};
   },

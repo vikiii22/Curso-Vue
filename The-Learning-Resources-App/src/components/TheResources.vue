@@ -42,6 +42,8 @@ export default {
   provide() {
     return {
       stored: this.storedResources,
+      addResource:this.addResource,
+      deleteResource:this.removeResource
     };
   },
 
@@ -49,6 +51,23 @@ export default {
     setSelectedTab(tab) {
       this.selectedTab = tab;
     },
+    addResource(titleP, desc, linkP){
+      const newResource={
+        id:titleP.toLowerCase(),
+        title:titleP,
+        description: desc,
+        link:linkP
+      };
+
+      this.storedResources.push(newResource);
+      this.selectedTab='resource-stored'
+    },
+
+    removeResource(resId){
+      const idx=this.storedResources.findIndex(e => e.id == resId);
+      this.storedResources.splice(idx, 1);
+      console.log(this.storedResources);
+    }
   },
 };
 </script>

@@ -5,16 +5,17 @@
     <nav>
       <a :href="link">Ver Recurso</a>
     </nav>
-    <base-button tipo="flat" texto="Delete" @click="eliminar()"></base-button>
+    <base-button tipo="flat" texto="Delete" @click="deleteResource(id)"></base-button>
   </li>
 </template>
 
 <script>
 import BaseButton from './BaseButton.vue';
 export default {
-  emits:['eliminar'],
+  inject:['deleteResource'],
   components: { BaseButton },
   props: {
+    id:String,
     title: String,
     description: String,
     link: String,
