@@ -8,8 +8,8 @@ import UsersList from './components/users/UsersList.vue'
 const router = createRouter({
     history: createWebHistory(),
     routes: [
-        {path: '/teams', component: TeamsList },
-        {path: '/users', component: UsersList },
+        {path: '/equipos', component: TeamsList },
+        {path: '/usuarios', component: UsersList },
     ]
 });
 
