@@ -44,13 +44,15 @@ a {
   background: transparent;
   border: 1px solid transparent;
   cursor: pointer;
+  text-decoration: none;
   color: white;
   padding: 0.5rem 1.5rem;
   display: inline-block;
 }
 
 a:hover,
-a:active {
+a:active,
+a.active {
   color: #f1a80a;
   border-color: #f1a80a;
   background-color: #1a037e;
